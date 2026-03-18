@@ -28,8 +28,6 @@ MODEL_NAME = "BM-K/KoSimCSE-roberta-multitask"  # 한국어 문장 유사도 사
 TRAIN_PATH = "out/triplets_train.tsv"           # make_anchor.py로 생성한 학습용 triplet
 
 BATCH_SIZE    = 8    # RTX 3050 기준 안전한 배치 크기
-                     # MNR Loss는 배치가 클수록 negative가 많아져 성능 향상 가능하나
-                     # VRAM 한계로 8로 고정
 EPOCHS        = 3    # 데이터가 소규모(241개)이므로 3회로 충분. 이상 늘리면 과적합 우려
 WARMUP_STEPS  = 100  # 초반 learning rate를 서서히 올리는 구간 (학습 안정화)
 
